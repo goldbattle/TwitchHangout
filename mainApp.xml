@@ -40,7 +40,7 @@
     </td>
     <td>
       <!-- Chat -->
-      <iframe frameborder="0" scrolling="no" id="chat_embed" src="https://twitch.tv/chat/embed?channel=cryaotic&popout_chat=true" height="100%" width="100%"></iframe>
+      <iframe frameborder="0" scrolling="no" id="chat_embed" src="http://twitch.tv/chat/embed?channel=cryaotic&popout_chat=true" height="100%" width="100%"></iframe>
     </td>
   </tr>
 </table>
