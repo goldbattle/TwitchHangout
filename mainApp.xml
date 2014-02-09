@@ -27,7 +27,7 @@
 <hr>
 
 <!-- Video -->
-<object type="application/x-shockwave-flash" height="378" width="620" id="live_embed_player_flash" data="https://www.twitch.tv/widgets/live_embed_player.swf?channel=cryaotic" bgcolor="#000000"><param name="allowFullScreen" value="true" /><param name="allowScriptAccess" value="always" /><param name="allowNetworking" value="all" /><param name="movie" value="https://www.twitch.tv/widgets/live_embed_player.swf" /><param name="flashvars" value="hostname=www.twitch.tv&channel=cryaotic&auto_play=true&start_volume=25" /></object>
+<object type="application/x-shockwave-flash" height="378" width="620" id="live_embed_player_flash" data="https://twitch.tv/widgets/live_embed_player.swf?channel=cryaotic" bgcolor="#000000"><param name="allowFullScreen" value="true" /><param name="allowScriptAccess" value="always" /><param name="allowNetworking" value="all" /><param name="movie" value="https://twitch.tv/widgets/live_embed_player.swf" /><param name="flashvars" value="hostname=www.twitch.tv&channel=cryaotic&auto_play=true&start_volume=25" /></object>
 
 <!-- Chat -->
 <iframe frameborder="0" scrolling="no" id="chat_embed" src="https://twitch.tv/chat/embed?channel=cryaotic&popout_chat=true" height="500" width="350"></iframe>
