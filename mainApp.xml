@@ -18,12 +18,11 @@
 		<Require feature="locked-domain" />
 	</ModulePrefs>
 	<Content type="html"><![CDATA[     
-
 <html>
 <body>
 
-<script src="http://plus.google.com/hangouts/_/api/v1/hangout.js"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="//plus.google.com/hangouts/_/api/v1/hangout.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 
 <table style="height:100%;width:100%;padding-bottom:20px;">
   <col width="80%">
@@ -47,6 +46,7 @@
 </table>
 
 </body>
+</html>
 ]]>
 </Content>
 </Module>
