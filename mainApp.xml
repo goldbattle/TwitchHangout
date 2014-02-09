@@ -27,10 +27,10 @@
 <hr>
 
 <!-- Video -->
-<object type="application/x-shockwave-flash" height="378" width="620" id="live_embed_player_flash" data="http://www.twitch.tv/widgets/live_embed_player.swf?channel=cryaotic" bgcolor="#000000"><param name="allowFullScreen" value="true" /><param name="allowScriptAccess" value="always" /><param name="allowNetworking" value="all" /><param name="movie" value="http://www.twitch.tv/widgets/live_embed_player.swf" /><param name="flashvars" value="hostname=www.twitch.tv&channel=cryaotic&auto_play=true&start_volume=25" /></object><a href="http://www.twitch.tv/cryaotic" style="padding:2px 0px 4px; display:block; width:345px; font-weight:normal; font-size:10px;text-decoration:underline; text-align:center;">Watch live video from Cryaotic on www.twitch.tv</a>
+<object type="application/x-shockwave-flash" height="378" width="620" id="live_embed_player_flash" data="https://www.twitch.tv/widgets/live_embed_player.swf?channel=cryaotic" bgcolor="#000000"><param name="allowFullScreen" value="true" /><param name="allowScriptAccess" value="always" /><param name="allowNetworking" value="all" /><param name="movie" value="https://www.twitch.tv/widgets/live_embed_player.swf" /><param name="flashvars" value="hostname=www.twitch.tv&channel=cryaotic&auto_play=true&start_volume=25" /></object>
 
 <!-- Chat -->
-<iframe frameborder="0" scrolling="no" id="chat_embed" src="http://twitch.tv/chat/embed?channel=cryaotic&popout_chat=true" height="500" width="350"></iframe>
+<iframe frameborder="0" scrolling="no" id="chat_embed" src="https://twitch.tv/chat/embed?channel=cryaotic&popout_chat=true" height="500" width="350"></iframe>
 
 </body>
 ]]>
