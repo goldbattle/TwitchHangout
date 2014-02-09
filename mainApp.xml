@@ -29,9 +29,13 @@
 <div id="content"></div>
 
 <script>
-$.get( "http://www.twitch.tv/cryaotic", function( data ) {
-  $( ".content" ).html( data );
-  alert( "Load was performed." );
+$.ajax({
+  url: "http://www.twitch.tv/cryaotic",
+  dataType: "jsonp",
+  success: function (data) {
+    $( ".content" ).html( data );
+    alert( "Load was performed." );
+  }
 });
 </script>
 
