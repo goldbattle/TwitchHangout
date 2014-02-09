@@ -29,13 +29,8 @@
 <div id="content"></div>
 
 <script>
-$.ajax({
-  url: "http://www.twitch.tv/cryaotic",
-  dataType: "jsonp",
-  success: function (data) {
-    $( ".content" ).html( data );
-    alert( "Load was performed." );
-  }
+$(function(){
+  $('.content').load('http://www.twitch.tv/cryaotic');
 });
 </script>
 
