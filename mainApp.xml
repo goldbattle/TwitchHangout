@@ -31,32 +31,18 @@
 
 <script type="text/javascript">
 $(document).ready(function() {
+
+$('#content').html('<h4>Loading...</h4>');
   // Url
   var url = 'http://www.twitch.tv/cryaotic';
 
-  var request = new XMLHttpRequest();
+var contentText = $.ajax({
+    url: url,
+    async: false
 
-  request.open('GET', url, true);
-  request.onreadystatechange = handler;
-  request.send();
+}).responseText;
 
-
-  // Get content
-  //$('#content').html('<h4>Loading...</h4>').load(url);
-
-
-  function handler(evtXHR) {
-      if (invocation.readyState == 4) {
-          if (invocation.status == 200) {
-            var response = invocation.responseText;
-            var textDiv = document.getElementById("content");
-            textDiv.innerHTML += response;
-          }
-          else {
-            alert("Invocation Errors Occured");
-          }
-      }
-  }
+$('#content').html(contentText);
 
 });
 
