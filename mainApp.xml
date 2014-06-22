@@ -27,7 +27,6 @@
 
 
 <script type="text/javascript">
-gapi.hangout.onApiReady.add(function(eventObj){
 // Called when we update the stream button
 function change_stream() {
   // Get data
@@ -38,7 +37,8 @@ function change_stream() {
   gapi.hangout.data.submitDelta(data);
   return false;
 }
-// Listen for data changes
+// Handle data uploads
+gapi.hangout.onApiReady.add(function(eventObj){
 gapi.hangout.data.onStateChanged(function(event) {
   // Get data we need
   var stream_url= document.getElementById('stream_url');
