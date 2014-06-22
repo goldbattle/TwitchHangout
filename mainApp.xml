@@ -40,7 +40,7 @@ function change_stream() {
   return false;
 }
 // Handle data uploads
-gapi.hangout.data.onStateChanged(function(event) {
+gapi.hangout.data.onStateChanged.add(function(event) {
   // Get data we need
   var stream_url= document.getElementById('stream_url');
   var stream_obj= document.getElementById('live_embed_player_flash');
