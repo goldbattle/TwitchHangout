@@ -40,7 +40,6 @@ function change_stream() {
   return false;
 }
 // Handle data uploads
-gapi.hangout.onApiReady.add(function(eventObj){
 gapi.hangout.data.onStateChanged(function(event) {
   // Get data we need
   var stream_url= document.getElementById('stream_url');
@@ -52,7 +51,6 @@ gapi.hangout.data.onStateChanged(function(event) {
   stream_obj.data = "https://twitch.tv/widgets/live_embed_player.swf?channel="+event.state["stream_input"];
   stream_url.value = "hostname=www.twitch.tv&auto_play=true&start_volume=25&channel="+event.state["stream_input"];
   stream_chat.src = "https://twitch.tv/chat/embed?channel="+event.state["stream_input"];
-});
 });
 </script>
 
