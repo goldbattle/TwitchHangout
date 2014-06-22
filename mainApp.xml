@@ -27,18 +27,28 @@
 
 
 <script type="text/javascript">
+// Called when we update the stream button
 function change_stream() {
+  // Get data
   var stream_input= document.getElementById('stream_input');
+  // Update data
+  gapi.hangout.data.submitDelta({"stream_input": stream_input.value});
+  return false;
+}
+// Listen for data changes
+gapi.hangout.data.onStateChanged(function(event) {
+  // Get data we need
   var stream_url= document.getElementById('stream_url');
   var stream_obj= document.getElementById('live_embed_player_flash');
   var stream_chat= document.getElementById('chat_embed');
-  
+  // Update our client
   //document.getElementById('FrameID').contentWindow.location.reload(true);
-  stream_obj.data = "https://twitch.tv/widgets/live_embed_player.swf?channel="+stream_input.value;
-  stream_url.value = "hostname=www.twitch.tv&auto_play=true&start_volume=25&channel="+stream_input.value;
-  stream_chat.src = "https://twitch.tv/chat/embed?channel="+stream_input.value;
-  return false;
-}
+  stream_obj.data = "https://twitch.tv/widgets/live_embed_player.swf?channel="+event.state["stream_input"];
+  stream_url.value = "hostname=www.twitch.tv&auto_play=true&start_volume=25&channel="+event.state["stream_input"];
+  stream_chat.src = "https://twitch.tv/chat/embed?channel="+event.state["stream_input"];
+});
+
+
 </script>
 
 <table style="height:100%;width:100%;">
