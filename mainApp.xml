@@ -34,7 +34,9 @@ function change_stream() {
   // Update data
   var data = {"stream_input": stream_input.value};
   console.log(data);
-  gapi.hangout.data.submitDelta(data);
+  gapi.hangout.onApiReady.add(function(eventObj){
+    gapi.hangout.data.submitDelta(data);
+  });
   return false;
 }
 // Handle data uploads
