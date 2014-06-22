@@ -68,9 +68,7 @@ gapi.hangout.data.onStateChanged.add(function(event) {
         <param name="flashvars" id="stream_url" value="" />
       </object>
     </div>
-    <div style="position:absolute;bottom:0;right:0;">
-      <!-- Chat -->
-      <iframe frameborder="0" scrolling="no" id="chat_embed" src="" height="95%" width="100%"></iframe>
+    <div style="position:absolute;bottom:0;right:100px;">
       <!--Stream Input-->
       <input type="text" id="stream_input" />
       <input type="submit" value="Change Stream" onclick="change_stream();" />
