@@ -78,8 +78,8 @@ function stream_chat() {
     <div style="position:absolute;bottom:1;right:120px;">
       <!--Stream Input-->
       <input type="text" id="stream_input" />
-      <input type="submit" value="Change Stream" onclick="change_stream();" />
-      <input type="button" value="Open Chat" onclick="stream_chat();" />
+      <button type="submit" value="Change Stream" onclick="change_stream();"></button>
+      <button type="button" value="Open Chat" onclick="stream_chat();"></button>
     </div>
   </tr>
 </table>
