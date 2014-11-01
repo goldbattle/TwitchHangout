@@ -54,7 +54,7 @@ function stream_chat() {
   // Get data
   var stream_input= document.getElementById('stream_input');
   // Open our chat window
-  newwindow=window.open('http://www.twitch.tv/'+stream_input+'/chat?popout=','name','height=600,width=300');
+  newwindow=window.open('http://www.twitch.tv/'+stream_input.value+'/chat?popout=','name','height=600,width=300');
   // Focus on it
   if (window.focus) {newwindow.focus()}
   return false;
