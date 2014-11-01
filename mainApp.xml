@@ -49,6 +49,16 @@ gapi.hangout.data.onStateChanged.add(function(event) {
   stream_url.value = "hostname=www.twitch.tv&auto_play=true&start_volume=25&channel="+event.state["stream_input"];
   stream_input.value = event.state["stream_input"];
 });
+// Called on chat open button
+function stream_chat() {
+  // Get data
+  var stream_input= document.getElementById('stream_input');
+  // Open our chat window
+  newwindow=window.open('http://www.twitch.tv/'+stream_input+'/chat?popout=','name','height=600,width=300');
+  // Focus on it
+  if (window.focus) {newwindow.focus()}
+  return false;
+}
 </script>
 
 <table style="height:100%;width:100%;">
@@ -69,6 +79,7 @@ gapi.hangout.data.onStateChanged.add(function(event) {
       <!--Stream Input-->
       <input type="text" id="stream_input" />
       <input type="submit" value="Change Stream" onclick="change_stream();" />
+      <input value="Open Chat" onclick="stream_chat();" />
     </div>
   </tr>
 </table>
