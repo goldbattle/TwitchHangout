@@ -11,7 +11,7 @@
 
 <script src="//plus.google.com/hangouts/_/api/v1/hangout.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<script src="//rawgit.com/goldbattle/TwitchHangout/master/assets/js/main.js"></script>
+<script src="//cdn.rawgit.com/goldbattle/TwitchHangout/master/assets/js/main.js"></script>
 
 <table style="height:100%;width:100%;">
   <col width="80%">
@@ -41,7 +41,7 @@
     </div>
     <!--Stream Input-->
     <div style="position:absolute;bottom:1;right:120px;">
-      <input type="text" id="stream_input" />
+      <input type="text" id="stream_input" value="sevadus"/>
       <button type="button" onclick="change_stream();">Change Stream</button>
       <button type="button" onclick="stream_chat();">Open Chat</button>
     </div>
