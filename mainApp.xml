@@ -1,18 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Module>
-<!-- Licensed under the Apache License, Version 2.0 (the "License"); you may not
- * use this file except in compliance with the License. You may obtain a copy of
- * the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *	
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
- * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
- * License for the specific language governing permissions and limitations under
- * the License
--->
-	<ModulePrefs title="TwitchTV Hangouts">
+	<ModulePrefs title="Twitch Hangouts">
 		<Require feature="rpc" />
 		<Require feature="views" />
 		<Require feature="locked-domain" />
@@ -21,45 +9,9 @@
 <html>
 <body style="background-color:#181818;">
 
-<script src="https://plus.google.com/hangouts/_/api/v1/hangout.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-
-
-
-<script type="text/javascript">
-// Called when we update the stream button
-function change_stream() {
-  // Get data
-  var stream_input= document.getElementById('stream_input');
-  // Update data
-  var data = {"stream_input": stream_input.value};
-  gapi.hangout.onApiReady.add(function(eventObj){
-    gapi.hangout.data.submitDelta(data);
-  });
-  return false;
-}
-// Handle data uploads
-gapi.hangout.data.onStateChanged.add(function(event) {
-  // Get data we need
-  var stream_url= document.getElementById('stream_url');
-  var stream_input= document.getElementById('stream_input');
-  var stream_obj= document.getElementById('live_embed_player_flash');
-  //document.getElementById('FrameID').contentWindow.location.reload(true);
-  stream_obj.data = "https://twitch.tv/widgets/live_embed_player.swf?channel="+event.state["stream_input"];
-  stream_url.value = "hostname=www.twitch.tv&auto_play=true&start_volume=25&channel="+event.state["stream_input"];
-  stream_input.value = event.state["stream_input"];
-});
-// Called on chat open button
-function stream_chat() {
-  // Get data
-  var stream_input= document.getElementById('stream_input');
-  // Open our chat window
-  newwindow=window.open('http://www.twitch.tv/'+stream_input.value+'/chat?popout=','name','height=600,width=400');
-  // Focus on it
-  if (window.focus) {newwindow.focus()}
-  return false;
-}
-</script>
+<script src="//plus.google.com/hangouts/_/api/v1/hangout.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="//190247365838.appspot.com/assets/js/main.js"></script>
 
 <table style="height:100%;width:100%;">
   <col width="80%">
