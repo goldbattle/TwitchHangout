@@ -11,7 +11,7 @@
 
 <script src="//plus.google.com/hangouts/_/api/v1/hangout.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<script src="//190247365838.appspot.com/assets/js/main.js"></script>
+<script src="//raw.githubusercontent.com/goldbattle/TwitchHangout/master/assets/js/main.js"></script>
 
 <table style="height:100%;width:100%;">
   <col width="80%">
