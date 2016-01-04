@@ -14,14 +14,22 @@ function change_stream() {
 gapi.hangout.data.onStateChanged.add(function(event) {
   // Get data we need
   var stream_input= document.getElementById('stream_input');
+  console.log("===============================")
+  console.log(stream_input)
   var stream_obj= document.getElementById('live_player');
+  console.log("===============================")
+  console.log(stream_obj)
   // Create our Iframe object
   ifrm = document.createElement("iframe");
   ifrm.setAttribute("src", "http://player.twitch.tv/?channel="+event.state["stream_input"]);
   ifrm.style.width = "100%";
   ifrm.style.height = "100%";
+  console.log("===============================")
+  console.log(ifrm)
   // Update document
   stream_obj = ifrm;
+  console.log("===============================")
+  console.log(stream_obj)
   stream_input.value = event.state["stream_input"];
 });
 
