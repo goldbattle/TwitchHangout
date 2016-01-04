@@ -13,12 +13,15 @@ function change_stream() {
 // Handle data uploads
 gapi.hangout.data.onStateChanged.add(function(event) {
   // Get data we need
-  var stream_url= document.getElementById('stream_url');
   var stream_input= document.getElementById('stream_input');
-  var stream_obj= document.getElementById('live_embed_player_flash');
-  //document.getElementById('FrameID').contentWindow.location.reload(true);
-  stream_obj.data = "https://twitch.tv/widgets/live_embed_player.swf?channel="+event.state["stream_input"];
-  stream_url.value = "hostname=www.twitch.tv&auto_play=true&start_volume=25&channel="+event.state["stream_input"];
+  var stream_obj= document.getElementById('live_player');
+  // Create our Iframe object
+  ifrm = document.createElement("iframe");
+  ifrm.setAttribute("src", "http://player.twitch.tv/?channel="+event.state["stream_input"]);
+  ifrm.style.width = "100%";
+  ifrm.style.height = "100%";
+  // Update document
+  stream_obj = ifrm;
   stream_input.value = event.state["stream_input"];
 });
 

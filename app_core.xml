@@ -18,17 +18,16 @@
   <col width="20%">
   <tr style="position:relative;">
     <!-- Video -->
-    <div>
+    <div id="live_player">
 
+      <!--
       <object type="application/x-shockwave-flash" height="100%" width="100%" id="live_embed_player_flash" data="" bgcolor="#000000" >
         <param name="allowFullScreen" value="false" />
         <param name="allowScriptAccess" value="always" />
         <param name="allowNetworking" value="all" />
         <param name="movie" value="https://twitch.tv/widgets/live_embed_player.swf" />
         <param name="flashvars" id="stream_url" value="" />
-      </object> 
-
-      <!--
+      </object>
       <object type="application/x-shockwave-flash" height="100%" width="100%" id="clip_embed_player_flash" data="" bgcolor="#000000" >
         <param  name='movie' value='http://www.twitch.tv/widgets/archive_embed_player.swf' /> 
         <param  name='allowScriptAccess' value='always' /> 
