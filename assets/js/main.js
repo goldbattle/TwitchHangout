@@ -27,7 +27,7 @@ gapi.hangout.data.onStateChanged.add(function(event) {
   console.log("===============================")
   console.log(ifrm)
   // Update document
-  stream_obj = ifrm;
+  stream_obj.innerHTML = ifrm;
   console.log("===============================")
   console.log(stream_obj)
   stream_input.value = event.state["stream_input"];
