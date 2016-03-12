@@ -23,7 +23,7 @@
     </div>
     <!--Stream Input-->
     <div style="position:absolute;bottom:1;right:120px;z-value:99999;">
-      <input type="text" id="stream_input" value="sevadus"/>
+      <input type="text" id="stream_input" value=""/>
       <button type="button" onclick="change_stream();">Change Stream</button>
       <button type="button" onclick="stream_chat();">Open Chat</button>
     </div>

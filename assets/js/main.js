@@ -26,12 +26,12 @@ gapi.hangout.data.onStateChanged.add(function(event) {
   // Check to see if div is empty, if so we need to create the player
   console.log(stream_obj.innerHTML)
   if(stream_obj.innerHTML === "") {
-    var player = new Twitch.Player("live_player", options);
+    Twitch.Player = new Twitch.Player("live_player", options);
     player.setVolume(0.5);
   } else {
     // Else just change the channel
-    Twitch.video.Player.setChannel(event.state["stream_input"])
-    Twitch.video.Player.play()
+    Twitch.Player.setChannel(event.state["stream_input"])
+    Twitch.Player.play()
   }
   // Update document
   stream_input.value = event.state["stream_input"];
@@ -42,7 +42,7 @@ function stream_chat() {
   // Get data
   var stream_input= document.getElementById('stream_input');
   // Open our chat window
-  newwindow=window.open('http://www.twitch.tv/'+stream_input.value+'/chat?popout=','name','height=600,width=400');
+  newwindow=window.open('https://www.twitch.tv/'+stream_input.value+'/chat?popout=','name','height=600,width=400');
   // Focus on it
   if (window.focus) {newwindow.focus()}
   return false;
