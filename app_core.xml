@@ -17,9 +17,9 @@
   <!-- Left Panel -->
   <div style="float:left;width:75%">
     <!-- Video -->
-    <div id="live_player" style="width:100%"></div>
+    <div id="live_player" style="display:inline;width:100%"></div>
     <!--Stream Input-->
-    <div style="right:0px;top:2px;position:absolute;z-value:99999;">
+    <div style="float;;z-value:99999;">
       <input type="text" id="stream_input" value=""/>
       <button type="button" onclick="change_stream();">U</button>
       <button type="button" onclick="toggle_chat();">T</button>
