@@ -22,7 +22,7 @@ gapi.hangout.data.onStateChanged.add(function(event) {
   Twitch.Player.setChannel(event.state["stream_input"])
   // Update document
   stream_input.value = event.state["stream_input"];
-  chat_embed.setAttribute("src", "http://www.twitch.tv/"+event.state["stream_input"]+"/chat");
+  chat_embed.setAttribute("src", "https://www.twitch.tv/"+event.state["stream_input"]+"/chat");
   console.log("TWITCH PLUGIN SWITCHING - " + event.state["stream_input"])
 });
 
