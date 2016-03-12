@@ -27,12 +27,18 @@ gapi.hangout.data.onStateChanged.add(function(event) {
   ifrm.setAttribute("src", "https://www.twitch.tv/"+event.state["stream_input"]+"/chat");
   ifrm.style.width = "100%";
   ifrm.style.height = "100%";
+  ifrm.style.border = "0";
   // Update
   live_chat.innerHTML = "";
   live_chat.appendChild(ifrm);
   // Debug
   console.log("TWITCH PLUGIN SWITCHING - " + event.state["stream_input"])
 });
+
+// Called on toggle chat button
+function toggle_chat() {
+
+}
 
 // Called on chat open button
 function stream_chat() {
@@ -61,6 +67,7 @@ function run_startup() {
   ifrm.setAttribute("src", "https://www.twitch.tv/"+gapi.hangout.data.getValue('stream_input')+"/chat");
   ifrm.style.width = "100%";
   ifrm.style.height = "100%";
+  ifrm.style.border = "0";
   live_chat.appendChild(ifrm);
   console.log("TWITCH PLUGIN HAS BEEN LOADED - " + gapi.hangout.data.getValue('stream_input'))
 } 

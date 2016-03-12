@@ -16,14 +16,19 @@
 
   <!-- Video -->
   <div id="live_player" style="float:left;width:75%"></div>
-  <!--Stream Input-->
-  <div style="position:absolute;bottom:1;right:15px;z-value:99999;">
-    <input type="text" id="stream_input" value=""/>
-    <button type="button" onclick="change_stream();">U</button>
-    <button type="button" onclick="stream_chat();">C</button>
-  </div>
-  <!-- Chat -->
-  <div id="live_chat" style="float:right;width:25%">
+
+  <!-- Right Panel -->
+  <div style="float:right;width:25%">
+    <!--Stream Input-->
+    <div style="width:100%;z-value:99999;">
+      <input type="text" id="stream_input" value=""/>
+      <button type="button" onclick="change_stream();">U</button>
+      <button type="button" onclick="toggle_chat();">T</button>
+      <button type="button" onclick="stream_chat();">C</button>
+    </div>
+    <!-- Chat -->
+    <div id="live_chat" style="width:100%">
+    </div>
   </div>
 
 </body>
