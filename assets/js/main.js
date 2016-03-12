@@ -14,11 +14,8 @@ function change_stream() {
 gapi.hangout.data.onStateChanged.add(function(event) {
   // Get data we need
   var stream_input= document.getElementById('stream_input');
-  console.log("===============================")
-  console.log(stream_input)
-  var stream_obj= document.getElementById('live_player');
-  console.log("===============================")
-  console.log(stream_obj)
+  // Get old stream object and delete
+  var stream_obj = document.getElementById('live_player');
   // Create our player
   var options = {
       width: '100%',
@@ -26,8 +23,17 @@ gapi.hangout.data.onStateChanged.add(function(event) {
       channel: event.state["stream_input"], 
       //video: "{VIDEO_ID}" 
   };
-  var player = new Twitch.Player("live_player", options);
-  player.setVolume(0.5);
+  // Check to see if div is empty, if so we need to create the player
+  console.log(stream_obj.innerHtml)
+  if(stream_obj.innerHtml === "") {
+    // Create new
+    var player = new Twitch.Player("live_player", options);
+    // Set nice volume
+    player.setVolume(0.5);
+  } else {
+    // Else just change the channel
+    stream_obj.setChannel(event.state["stream_input"])
+  }
   // Update document
   stream_input.value = event.state["stream_input"];
 });
