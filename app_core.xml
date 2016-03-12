@@ -39,6 +39,8 @@
   </tr>
 </table>
 
+<body onload="run_startup()">
+
 </body>
 </html>
 ]]>

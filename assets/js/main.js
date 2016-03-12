@@ -38,7 +38,7 @@ function stream_chat() {
 }
 
 // On load, create new player
-document.onload = function() {
+function run_startup() {
   // Create our player
   var options = {
       width: '100%',
