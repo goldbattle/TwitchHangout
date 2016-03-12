@@ -7,7 +7,7 @@
 	</ModulePrefs>
 	<Content type="html"><![CDATA[     
 <html>
-<body style="background-color:#181818;">
+<body style="background-color:#181818;" onload="run_startup()">
 
 <script src="https://plus.google.com/hangouts/_/api/v1/hangout.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
@@ -39,7 +39,6 @@
   </tr>
 </table>
 
-<body onload="run_startup()">
 
 </body>
 </html>
