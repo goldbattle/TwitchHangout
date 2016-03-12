@@ -14,22 +14,23 @@
 <script src="https://player.twitch.tv/js/embed/v1.js"></script>
 <script src="https://rawgit.com/goldbattle/TwitchHangout/master/assets/js/main.js"></script>
 
-  <!-- Video -->
-  <div id="live_player" style="float:left;width:75%"></div>
-
   <!-- Right Panel -->
   <div style="float:right;width:25%">
-    <!--Stream Input-->
-    <div style="width:100%;z-value:99999;">
+    <!-- Video -->
+    <div id="live_player" style="float:left;width:75%"></div>
+        <!--Stream Input-->
+    <div style="right:0px;top:2px;position:absolute;z-value:99999;">
       <input type="text" id="stream_input" value=""/>
       <button type="button" onclick="change_stream();">U</button>
       <button type="button" onclick="toggle_chat();">T</button>
       <button type="button" onclick="stream_chat();">C</button>
     </div>
-    <!-- Chat -->
-    <div id="live_chat" style="width:100%">
-    </div>
   </div>
+  
+  <!-- Chat -->
+  <div id="live_chat" style="float:right;width:25%">
+  </div>
+  
 
 </body>
 </html>
