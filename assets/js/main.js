@@ -17,12 +17,19 @@ gapi.hangout.data.onStateChanged.add(function(event) {
   // Get old stream object and delete
   var stream_obj = document.getElementById('live_player');
   // Get chat enbed
-  var chat_embed = document.getElementById('chat_embed');
+  var live_chat = document.getElementById('live_chat');
   // Change channel
   Twitch.Player.setChannel(event.state["stream_input"])
   // Update document
   stream_input.value = event.state["stream_input"];
-  chat_embed.setAttribute("src", "https://www.twitch.tv/"+event.state["stream_input"]+"/chat");
+  // Create chat iframe
+  ifrm = document.createElement("iframe");
+  ifrm.setAttribute("src", "https://www.twitch.tv/"+event.state["stream_input"]+"/chat");
+  ifrm.style.width = "100%";
+  ifrm.style.height = "100%";
+  // Update
+  live_chat.innerHTML = ifrm;
+  // Debug
   console.log("TWITCH PLUGIN SWITCHING - " + event.state["stream_input"])
 });
 

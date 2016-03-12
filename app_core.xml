@@ -22,15 +22,8 @@
     <button type="button" onclick="change_stream();">Change Stream</button>
     <button type="button" onclick="stream_chat();">Open Chat</button>
   </div>
-  <div style="float:right;width:20%">
-    <!-- Chat -->
-    <iframe frameborder="0" 
-      scrolling="no" 
-      id="chat_embed" 
-      src="" 
-      height="100%" 
-      width="100%">
-    </iframe>
+  <!-- Chat -->
+  <div id="live_chat" style="float:right;width:20%">
   </div>
 
 </body>
