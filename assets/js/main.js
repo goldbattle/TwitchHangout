@@ -28,7 +28,8 @@ gapi.hangout.data.onStateChanged.add(function(event) {
   ifrm.style.width = "100%";
   ifrm.style.height = "100%";
   // Update
-  live_chat = ifrm;
+  live_chat.innerHTML = "";
+  live_chat.appendChild(ifrm);
   // Debug
   console.log("TWITCH PLUGIN SWITCHING - " + event.state["stream_input"])
 });
