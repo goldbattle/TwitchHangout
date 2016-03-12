@@ -25,20 +25,12 @@ gapi.hangout.data.onStateChanged.add(function(event) {
       channel: event.state["stream_input"], 
       //video: "{VIDEO_ID}" 
   };
-  // Check to see if div is empty, if so we need to create the player
-  if(stream_obj.innerHTML.trim() === "") {
-    Twitch.Player = new Twitch.Player("live_player", options);
-    player.setVolume(0.5);
-  } else {
-    // Else just change the channel
-    Twitch.Player.setChannel(event.state["stream_input"])
-    Twitch.Player.play()
-  }
-  // If stream input is empty, remove the player
-  if(event.state["stream_input"].trim() === "") {
+  try {
+    // Remove old
     Twitch.Player.destroy()
-    return;
-  }
+  } catch(v) {}
+  // Create new player
+  Twitch.Player = new Twitch.Player("live_player", options);
   // Update document
   stream_input.value = event.state["stream_input"];
   chat_embed.setAttribute("src", "http://www.twitch.tv/"+event.state["stream_input"]+"/chat");
