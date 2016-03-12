@@ -26,9 +26,7 @@ gapi.hangout.data.onStateChanged.add(function(event) {
   // Check to see if div is empty, if so we need to create the player
   console.log(stream_obj.innerHTML)
   if(stream_obj.innerHTML === "") {
-    // Create new
     var player = new Twitch.Player("live_player", options);
-    // Set nice volume
     player.setVolume(0.5);
   } else {
     // Else just change the channel
