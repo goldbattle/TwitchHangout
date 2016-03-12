@@ -27,6 +27,16 @@
       <button type="button" onclick="stream_chat();">Open Chat</button>
     </div>
   </tr>
+  <tr style="position:relative;">
+    <!-- Chat -->
+    <iframe frameborder="0" 
+      scrolling="no" 
+      id="chat_embed" 
+      src="" 
+      height="100%" 
+      width="100%">
+    </iframe>
+  </tr>
 </table>
 
 </body>

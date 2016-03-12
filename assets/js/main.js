@@ -16,6 +16,8 @@ gapi.hangout.data.onStateChanged.add(function(event) {
   var stream_input = document.getElementById('stream_input');
   // Get old stream object and delete
   var stream_obj = document.getElementById('live_player');
+  // Get chat enbed
+  var chat_embed = document.getElementById('chat_embed');
   // Create our player
   var options = {
       width: '100%',
@@ -39,6 +41,7 @@ gapi.hangout.data.onStateChanged.add(function(event) {
   }
   // Update document
   stream_input.value = event.state["stream_input"];
+  chat_embed.setAttribute("src", "http://www.twitch.tv/"+event.state["stream_input"]+"/chat");
 });
 
 // Called on chat open button
