@@ -23,7 +23,7 @@ gapi.hangout.data.onStateChanged.add(function(event) {
   // Update document
   stream_input.value = event.state["stream_input"];
   // Create chat iframe
-  ifrm = document.createElement("iframe");
+  var ifrm = document.createElement("iframe");
   ifrm.setAttribute("src", "https://www.twitch.tv/"+event.state["stream_input"]+"/chat");
   ifrm.style.width = "100%";
   ifrm.style.height = "100%";
@@ -56,5 +56,11 @@ function run_startup() {
   };
   // Insert
   Twitch.Player = new Twitch.Player("live_player", options);
+  // Add chatroom
+  var ifrm = document.createElement("iframe");
+  ifrm.setAttribute("src", "https://www.twitch.tv/"+gapi.hangout.data.getValue('stream_input')+"/chat");
+  ifrm.style.width = "100%";
+  ifrm.style.height = "100%";
+  live_chat.appendChild(ifrm);
   console.log("TWITCH PLUGIN HAS BEEN LOADED - " + gapi.hangout.data.getValue('stream_input'))
 } 
