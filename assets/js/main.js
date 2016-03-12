@@ -23,6 +23,7 @@ gapi.hangout.data.onStateChanged.add(function(event) {
   // Update document
   stream_input.value = event.state["stream_input"];
   chat_embed.setAttribute("src", "http://www.twitch.tv/"+event.state["stream_input"]+"/chat");
+  console.log("TWITCH PLUGIN SWITCHING - " + event.state["stream_input"])
 });
 
 // Called on chat open button
@@ -46,5 +47,6 @@ document.onload = function() {
       //video: "{VIDEO_ID}"
   };
   // Insert
-  Twitch.Player = new Twitch.Player("live_player", options); 
-}
+  Twitch.Player = new Twitch.Player("live_player", options);
+  console.log("TWITCH PLUGIN HAS BEEN LOADED - " + gapi.hangout.data.getValue('stream_input'))
+} 
