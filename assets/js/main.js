@@ -19,17 +19,16 @@ gapi.hangout.data.onStateChanged.add(function(event) {
   var stream_obj= document.getElementById('live_player');
   console.log("===============================")
   console.log(stream_obj)
-  // Create our Iframe object
-  ifrm = document.createElement("iframe");
-  ifrm.setAttribute("src", "http://player.twitch.tv/?channel="+event.state["stream_input"]);
-  ifrm.style.width = "100%";
-  ifrm.style.height = "100%";
-  console.log("===============================")
-  console.log(ifrm)
+  // Create our player
+  var options = {
+      width: '100%',
+      height: '100%',
+      channel: event.state["stream_input"], 
+      //video: "{VIDEO_ID}" 
+  };
+  var player = new Twitch.Player("live_player", options);
+  player.setVolume(0.5);
   // Update document
-  stream_obj.innerHTML = ifrm;
-  console.log("===============================")
-  console.log(stream_obj)
   stream_input.value = event.state["stream_input"];
 });
 
