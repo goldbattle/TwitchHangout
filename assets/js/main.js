@@ -32,8 +32,8 @@ gapi.hangout.data.onStateChanged.add(function(event) {
     player.setVolume(0.5);
   } else {
     // Else just change the channel
-    stream_obj.setChannel(event.state["stream_input"])
-    stream_obj.play()
+    Twitch.video.Player.setChannel(event.state["stream_input"])
+    Twitch.video.Player.play()
   }
   // Update document
   stream_input.value = event.state["stream_input"];
