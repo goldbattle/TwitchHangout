@@ -19,8 +19,7 @@
   <col width="20%">
   <tr style="position:relative;">
     <!-- Video -->
-    <div id="live_player">
-    </div>
+    <div id="live_player"></div>
     <!--Stream Input-->
     <div style="position:absolute;bottom:1;right:120px;z-value:99999;">
       <input type="text" id="stream_input" value=""/>
